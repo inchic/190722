@@ -54,6 +54,10 @@ router.get('/public/190722/output', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/190722/output_1.html'));
     //__dirname : It will resolve to your project folder.
 });
+router.get('/inchic/03_3', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/03_3output.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 
