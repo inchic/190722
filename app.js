@@ -62,6 +62,14 @@ router.get('/public/190722/02', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/190722/02_switch.html'));
     //__dirname : It will resolve to your project folder.
 });
+router.get('/public/190722/03', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/03_string_1.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/public/190722/04', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/04_string_2.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 
