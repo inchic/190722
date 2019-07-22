@@ -4,14 +4,26 @@
         <script>
             function myFunction()    {
                 document.getElementById("demo").innerHTML = "para changed."
+                var a="avc";
+                document.write(a); //지역변수
             }
+            var a="aa"; //전역변수
         </script>
 
     </head>
     <body>
         <p id="demo">A Paragraph</p>
         <button type="button" onclick="myFunction()">Try it</button>
+        
+        <style>
+        /* sadf */
+        </style>
+<!-- asdf -->
+        <script>
+        document.write(a); //전역변수 불러
+        
 
+        </script>
 
     </body>
 
