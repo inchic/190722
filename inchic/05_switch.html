@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script>
+            var text;
+            switch (new Date().getDay()) { // Debug Mode인 console서 확인
+                case 4:
+                case 5:
+                    text = "Soon it is Weekend";
+                    break;
+                case 0:
+                case 6:
+                    text = "It is Weekend";
+                    break;
+                default:
+                    text = "Looking forward to the Weekend";
+            }
+        </script>
+    </head>
+
+    <body>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML=text;
+            document.write(new Date().getDate());
+            document.write(new Date().getDay());
+            
+            // getDate: 날짜
+            // gatDay: 요일( 0일 1월~ 5금 6토)
+
+        </script>
+
+    </body>
+
+</html>

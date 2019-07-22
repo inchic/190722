@@ -50,8 +50,24 @@ router.get('/inchic/03_2', function (req, res) {
     res.sendFile(path.join(__dirname + '/inchic/03_2consoleLog.html'));
     //__dirname : It will resolve to your project folder.
 });
-router.get('/public/190722/output', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/190722/output_1.html'));
+router.get('/public/190722/01', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/01_output_1.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/03_3', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/04_1output.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/public/190722/02', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/02_switch.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/public/190722/03', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/03_string_1.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/public/190722/04', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/190722/04_string_2.html'));
     //__dirname : It will resolve to your project folder.
 });
 
