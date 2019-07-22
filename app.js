@@ -22,14 +22,36 @@ router.get('/', function (req, res) {
 
 
 //인식
-router.get('/inchic/index', function (req, res) {
-    res.sendFile(path.join(__dirname + '/inchic/index.html'));
+router.get('/inchic/01', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/01_intro.html'));
     //__dirname : It will resolve to your project folder.
 });
-router.get('/inchic/notice', function (req, res) {
-    res.sendFile(path.join(__dirname + '/inchic/notice.html'));
+router.get('/inchic/02_0', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/02_0whereToScriptTag.html'));
     //__dirname : It will resolve to your project folder.
 });
+router.get('/inchic/02_1', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/02_1bodyTag.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/02_2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/02_2externalFile.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/03_0', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/03_0outputDisplay.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/03_1', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/03_1windowAlert.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/03_2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/03_2consoleLoghtml'));
+    //__dirname : It will resolve to your project folder.
+});
+
+
 
 //인식 응답자
 router.get('/inchic', function (req, res) {
