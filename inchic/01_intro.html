@@ -8,13 +8,14 @@
 <body>
     <h2>JavaScript in Body</h2>
     <p id="demo">
-
+        my First
     </p>
+    <h1 id="demo"></h1>
     <script>
         document.getElementById("demo").innerHTML = "My First JavaScript"
     </script>
 
-    <h1 id="demo"></h1>
+    
 
     <div>##div##</div>
 
@@ -24,7 +25,35 @@
     </script>
     <p id="demo1"></p>
 
-    <h1 id="demo"></h1>
+    <!-- 한페이지 중복id시 JavaScript 동작 확인 -> 동작안함 -->
+    <!-- <h1 id="demo"></h1> -->
+
+
+
+
+    <!-- https://www.w3schools.com/jsref/prop_html_innerhtml.asp -->
+    <p id="demo3" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+    <!-- 한페이지 중복id: 동작안함 -->
+    <h1 id="demo3" onclick="myFunction()">H1 Click me to change my HTML content (innerHTML).</h1>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo3").innerHTML = "Paragraph changed!";
+        }
+    </script>
+
+   
+
+
+     <!-- 순서바꾸기동작함 -->
+
+    <!-- <script>
+        function myFunction() {
+            document.getElementById("demo4").innerHTML = "Paragraph changed!";
+        }
+    </script>
+
+    <p id="demo4" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p> -->
 
 
 </body>
