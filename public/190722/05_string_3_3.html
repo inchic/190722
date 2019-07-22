@@ -14,9 +14,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+    <script>
+        var str='10, 20, 30, 40, 50';
+
+        // 10 20 30 40 50 을 space없이 출력 -> trim(); 기능을 넣어준다
+
+
+        var one = str.split(",");
+        var two = one.trim();
+
+
+    </script>
 </head>
 
 <body>
+<!-- substring(indexOf("name"),indexOf(name)+4) str.length -->
+
+출력:  <span id="demo00"></span><br>
+출력:  <span id="demo01"></span><br>
+출력:  <span id="demo02"></span><br>
+출력:  <span id="demo03"></span><br>
+출력:  <span id="demo04"></span><br>
+
+
+<script>
+    document.getElementById("demo00").innerHTML=two[0];
+    document.getElementById("demo01").innerHTML=two[1];
+    document.getElementById("demo02").innerHTML=two[2];
+    document.getElementById("demo03").innerHTML=two[3];
+    document.getElementById("demo04").innerHTML=two[4];
+   
+</script>
+
+
+
 
 </body>
 
