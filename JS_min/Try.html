@@ -1,0 +1,101 @@
+<!-- 디스 이용 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function firstChange(){
+            var docForm=document.form.first.options.selectedIndex;
+            secondChange(docForm);
+        }
+
+        function secondChange(number){
+            document.form.second.options.selectedIndex = number;
+        }
+
+        function CheckList(){
+            var FistName = document.check.FistName.value;
+            var LastName = document.check.LastName.value;
+            var UserName = document.check.UserName.value;
+            var City = document.check.City.value;
+            var State = document.check.State.value;
+            var Zip = document.check.Zip.value;
+
+            var Fistl = FistName.length;
+            var Lastl = LastName.length;
+            var Userl = UserName.length;
+            var Cityl = City.length;
+            var Statel = State.length;
+            var Zipl = Zip.length;
+
+            if(Fistl>3 && Lastl>3 && Userl>3 && Cityl>3 && Statel>3 && Zipl>3 ){
+                return true;
+            }
+
+            
+
+            
+
+
+        }
+    
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <form name="form">
+        <select name=first onchange="firstChange();">
+            <option value=''>대분류</option>
+            <option value=''>1</option>
+            <option value=''>2</option>
+            <option value=''>3</option>
+        </select>
+
+        <select name=second onchange="secondChange();">
+            <option value=''>중분류</option>
+            <option value=''>1</option>
+            <option value=''>2</option>
+            <option value=''>3</option>
+        </select>
+    </form>
+
+    <span id="demo01"></span><br>
+    <span id="demo02"></span><br>
+    <span id="demo03"></span><br>
+    <span id="demo04"></span><br>
+    <span id="demo05"></span><br>
+    <span id="demo06"></span><br>
+
+    <form name="check" action="/login" onsubmit="return CheckList()">
+        FirstName: <input type="text" name="FirstName"><br />
+        LastName: <input type="text" name="LastName"><br />
+        UserName: <input type="text" name="UserName"><br />
+        City: <input type="text" name="City"><br />
+        State: <input type="text" name="State"><br />
+        Zip: <input type="text" name="Zip"><br />
+        <input type="submit" value="submit form"> 
+    <!-- placeholder="글씨 안에 보이게끔"  -->
+    </form>
+
+
+</body>
+</html>

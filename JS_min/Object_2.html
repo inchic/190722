@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script>
+            var fDisplay = function(firstVal, secondVal){
+                return firstVal + "," + secondVal;
+            };
+            document.getElementById("demo1").innerHTML = typeof(fDisplay) + "<br>" + fDisplay("John");
+
+            function Person(firstName, lastName, age, eyeColor) {
+                this.firstName = firstName; this.age = age;
+                this.changeName = function (name) { // var x7 = new Function(){}; 확장
+                    this.lastName = name;
+                }
+            }
+            
+            var myMother = new Person("Sally","Rally",48,"green");
+            myMother.changeName("Doe");
+            document.getElementById("demo2").innerHTML = "My mother is " + myMother.lastName;
+
+        </script>
+
+    </body>
+</html>
