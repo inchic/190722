@@ -15,11 +15,6 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-        <script>
-            function auto(){
-
-            }
-        </script>
 
 
 
@@ -27,6 +22,21 @@
 
 <body>
 
+
+    <input type="text" class="form-control is-valid">
+    <p id="demo02"></p>
+    <!-- <input type= &quot; text&quot class= &quot; form-control is-valid &quot; > -->
+
+
+    <!-- <input type="text"> -->
+
+    <script>
+        // document.getElementById("demo01").innerHTML = "demo01"
+        document.getElementById("demo02").innerHTML = ""
+    </script>
+
+
+    <!-- 
     <script>
         function isName(){
             var firstName = document.myform.firstName.value;
@@ -34,11 +44,16 @@
                 var firstInvalid = "Please provide a valid name";
                 document.getElementById("fName").innerHTML=firstInvalid;
                 document.myform.firstName.class = "form-control is-valid";
-                document.write(document.myform.firstName.class)
+                var a= document.write(document.myform.firstName.class)
                 
                 return false;
             }
         }
+
+ 
+
+        document.getElementById("demo01").innerHTML = "first name" ;
+
     </script>
 
     <form class="myform" onsubmit="return isName()">
@@ -48,8 +63,8 @@
 
         <button type="submit" >submit</button>
 
-    </form>
-    
+    </form> -->
+
 
 </body>
 

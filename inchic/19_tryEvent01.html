@@ -23,7 +23,7 @@
 <body>
 
     <script>
-        function auto() {
+        function auto2() {
 
         }
     </script>
@@ -58,36 +58,54 @@
         </div>
 
 
+        <!-- form을 써야만 작동하고, div class=form을 쓰면 작동 안함 -->
+        <form name=form> 
+            
+            <div class="row">
 
-        <div class="row">
-            <div class="col-sm-6">
+                <div class="col-sm-6">
 
-                <div class="form-inline">
-                    <label for="sel3">대분류:</label>
-                    <select class="form-control col" id="sel3" multiple onchange="auto2()">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                    <div class="form-inline">
+                        <label for="sel3">대분류:</label>
+                        <select class="form-control col" id="sel3" name=sel3 multiple onchange="auto2_1();">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
 
-                    </select>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6 border">
-                <script>
-                    function auto2() {
-                        var input = document.getElementById("sel3").value;
-                        // document.write(input);
-                        document.getElementById("two").innerHTML = input;
-                    }
-                </script>
-                <p id="two"></p>
-            </div>
 
-        </div>
+
+                <div class="col-sm-6">
+                    <div class="form-inline">
+                        <label for="sel4">소분류:</label>
+                        <select class="form-control col" id="sel4" name=sel4 multiple onchange="auto2_2();">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
 
 
     </div>
+    <script>
+        function auto2_1() {
+            var docForm = document.form.sel3.options.selectedIndex;
+            auto2_2(docForm)
+        }
+        function auto2_2(num) {
+            document.form.sel4.options.selectedIndex = num;
+        }
+    </script>
 
 </body>
 

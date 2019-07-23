@@ -29,27 +29,29 @@
 
     <script>
         function isName(){
-            var firstName = document.myform.firstName.value;
+            var firstName = document.firstName;
             if(firstName == null || firstName == ""){
-                var firstInvalid = "Please provide a valid name";
-                document.getElementById("fName").innerHTML=firstInvalid;
-                document.myform.firstName.class = "form-control is-valid";
-                document.write(document.myform.firstName.class)
-                
                 return false;
             }
         }
     </script>
 
-    <form class="myform" onsubmit="return isName()">
-        First name 
-        <input type="text" class="form-control valid" name="firstName">
-        <div class="valid-feedback">Looks good!</div>
 
-        <button type="submit" >submit</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="text-muted">First name</div>
+                <input type="text" class="form-control is-valid" id="valid" name="firstName">
+                <!-- <div class="valid-feedback">Looks good!</div> -->
+              
+            </div>
+         
 
-    </form>
-    
+
+        </div>
+
+
+    </div>
 
 </body>
 
