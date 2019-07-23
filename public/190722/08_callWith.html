@@ -18,30 +18,27 @@
 
 <body>
 
-    <p id="demo01"></p>
-    <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
+    <script type="text/javascript">
+        
+        function concatenate(first,last){
+            var full;
+            full = first+last;
+            return full;
+        }
+
+        function secondFunction(){
+            var result;
+            result=concatenate('Zara','Ali');
+            document.write(result);
+        }
+        
 
     </script>
 
+    <form>
+        <input type="button" onclick="secondFunction()" value="Call Function">
 
-    <p id="demo02"></p>
-    <script>
-        var d = new Date(); // date는 대문자처리해야함
-        document.write(new Date());
-        document.write("<br>");
-        document.write(new Date().getMonth());
-
-        var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-    </script>
-    <p></p>
-
-    <p id="demo03"></p>
-    <script>
-        document.getElementById("demo03").innerHTML = Math.random();
-    </script>
+    </form>
 
 </body>
 

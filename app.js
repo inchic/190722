@@ -70,6 +70,10 @@ router.get('/public/190722/04', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/190722/04_string_2.html'));
     //__dirname : It will resolve to your project folder.
 });
+router.get('/inchic/18', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/18_onsubmit.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 
@@ -80,6 +84,10 @@ router.get('/inchic', function (req, res) {
     res.send('Request parameters : ' + 'email:' + req.query.email + 'user name:' + req.query.userName + 'password' + req.query.passWord)
 });
 
+router.get('/login', function (req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + 'name:' + req.query.name + 'password:' + req.query.password)
+});
 
 
 
