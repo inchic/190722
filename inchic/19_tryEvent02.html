@@ -14,34 +14,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+        <script>
+            function auto(){
+
+            }
+        </script>
+
+
+
 </head>
 
 <body>
 
-    <p id="demo01"></p>
     <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
-
+        function isName(){
+            var firstName = document.firstName;
+            if(firstName == null || firstName == ""){
+                return false;
+            }
+        }
     </script>
 
 
-    <p id="demo02"></p>
-    <script>
-        var d = new Date(); // date는 대문자처리해야함
-        document.write(new Date());
-        document.write("<br>");
-        document.write(new Date().getMonth());
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="text-muted">First name</div>
+                <input type="text" class="form-control is-valid" id="valid" name="firstName">
+                <!-- <div class="valid-feedback">Looks good!</div> -->
+              
+            </div>
+         
 
-        var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-    </script>
-    <p></p>
+        </div>
 
-    <p id="demo03"></p>
-    <script>
-        document.getElementById("demo03").innerHTML = Math.random();
-    </script>
+
+    </div>
 
 </body>
 

@@ -20,27 +20,21 @@
 
     <p id="demo01"></p>
     <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
-
+        function myFunction(p1,p2){
+            return p1*p2;
+        }
+    document.getElementById("demo01").innerHTML=myFunction(4,3);
     </script>
 
 
+    <script>
+        function toCelsius(fahrenheit){
+            return(5/9)*(fahrenheit-32);
+        }
+    </script>
     <p id="demo02"></p>
     <script>
-        var d = new Date(); // date는 대문자처리해야함
-        document.write(new Date());
-        document.write("<br>");
-        document.write(new Date().getMonth());
-
-        var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-    </script>
-    <p></p>
-
-    <p id="demo03"></p>
-    <script>
-        document.getElementById("demo03").innerHTML = Math.random();
+        document.getElementById("demo02").innerHTML=toCelsius(77)+"Celsius";
     </script>
 
 </body>

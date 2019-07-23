@@ -18,29 +18,33 @@
 
 <body>
 
-    <p id="demo01"></p>
-    <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
+    <script type="text/javascript">
+        
+        var name="Ali";
+        var money;
+        document.write(typeof name + "<br>");
+        
+        document.write(typeof money + "<br>");
+        money = 2000.50;
+        document.write(typeof money + "<br>" + "<br>");
 
-    </script>
+        var myVar = "global";
+        document.write(myVar + "<br>");
+        
+        function checkscope(){
+            var myVar="local" ;
+            document.write(myVar);
+            
+        }
 
+        // document.write(myVar + "<br>");
+        checkscope();   //local 찍히고
+        document.write(checkscope()); // checkscope()로 local찍히고 write(checkscope())로 undefined 찍히고
+        
 
-    <p id="demo02"></p>
-    <script>
-        var d = new Date(); // date는 대문자처리해야함
-        document.write(new Date());
-        document.write("<br>");
-        document.write(new Date().getMonth());
+        // document.write(typeof myVar + "<br>");
+        // document.write(typeof (3+4) + "<br>");
 
-        var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-    </script>
-    <p></p>
-
-    <p id="demo03"></p>
-    <script>
-        document.getElementById("demo03").innerHTML = Math.random();
     </script>
 
 </body>

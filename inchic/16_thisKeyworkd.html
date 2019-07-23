@@ -18,30 +18,25 @@
 
 <body>
 
-    <p id="demo01"></p>
     <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
-
+        var getElement = function (param) {
+            var innerParam = param;
+            alert(innerParam.value)
+            var docForm = document.myform
+            alert(docForm.method)
+        }
     </script>
 
+    <FORM NAME="myform" ACTION="" METHOD="GET">
+        Enter something in the box: <BR>
+        <INPUT TYPE="text" NAME="inputbox" VALUE="Good" onclick="getElement(this);">
+        <INPUT TYPE="button" NAME="button" Value="ClickButton" onclick="getElement(this);">
+        <INPUT TYPE="button" NAME="customForm" Value="customForm" onclick="getElement(this);">
+    </FORM>
 
-    <p id="demo02"></p>
-    <script>
-        var d = new Date(); // date는 대문자처리해야함
-        document.write(new Date());
-        document.write("<br>");
-        document.write(new Date().getMonth());
 
-        var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-    </script>
-    <p></p>
-
-    <p id="demo03"></p>
-    <script>
-        document.getElementById("demo03").innerHTML = Math.random();
-    </script>
+    
 
 </body>
 
