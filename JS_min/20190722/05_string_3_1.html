@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script>
+            var sen = "Hi, my name is Sam!";
+            var a1 = sen.split(" ");
+            var a2 = sen.substring(4,19);
+            var a3 = a1[0]+sen.substring(14,19);
+            var number = sen.indexOf("name");
+            var a4 = sen.substring(number,number+4);
+            var number2 = sen.indexOf("Sam");
+            var a5 = sen.substring(number2,sen.length-1);
+        </script>
+    </head>
+
+    <body>
+        출력: <span id="a1"></span><br>
+        출력: <span id="a2"></span><br>
+        출력: <span id="a3"></span><br>
+        출력: <span id="a4"></span><br>
+        출력: <span id="a5"></span><br>
+
+        <script>
+            document.getElementById("a1").innerHTML = a1[0];
+            document.getElementById("a2").innerHTML = a2;
+            document.getElementById("a3").innerHTML = a3;
+            document.getElementById("a4").innerHTML = a4;
+            document.getElementById("a5").innerHTML = a5;
+        </script>
+    </body>
+</html>
