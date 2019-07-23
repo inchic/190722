@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+
+        <script>
+            var person01 = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" }
+            var x = person01.constructor(); x.age = 10;
+            document.write(typeof(x));
+            var person02 = { // → var person02 = new Object(); 가능
+            firstName: "John", lastName : "Doe", // → person.firstName = "John"; 가능
+            fullName : function(firstVal,secondVal) {
+                return this.firstName + " " + firstVal + " " + secondVal;
+                }
+            };
+        
+        document.getElementById("demo1").innerHTML = person01.firstName + "is" + person01.age + "years old";
+        person02.nationality="korean";
+        document.getElementById("demo2").innerHTML = person02.nationality;
+        delete person01.age;
+       
+        
+        document.write(person02["firstName"]+" "+person02.lastName);
+        document.write("<br>");
+        document.write(person02.fullName("HANE","Valer"))
+        document.write("<br>"+person02[0]);
+
+
+        </script>
+
+
+    </body>
+</html>
