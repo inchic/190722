@@ -83,6 +83,10 @@ router.get('/inchic/19_2', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+router.get('/test', function (req, res) {
+    res.sendFile(path.join(__dirname + '/JS_min/20190724/07_Cookies.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 
