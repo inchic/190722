@@ -83,12 +83,17 @@ router.get('/inchic/19_2', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+<<<<<<< HEAD
 router.get('/inchic/24_3', function (req, res) {
     res.sendFile(path.join(__dirname + '/inchic/24_bom_geolocation.html'));
     //__dirname : It will resolve to your project folder.
 });
 router.get('/inchic/25', function (req, res) {
     res.sendFile(path.join(__dirname + '/inchic/25_cookies.html'));
+=======
+router.get('/test', function (req, res) {
+    res.sendFile(path.join(__dirname + '/JS_min/20190724/07_Cookies.html'));
+>>>>>>> ed59b8f7e4ec8b9cffc72564081ed6c46bf3320e
     //__dirname : It will resolve to your project folder.
 });
 

@@ -13,48 +13,48 @@
             
             var check;
 
-            var a=false;
-            var b=false;
+            // var a=false;
+            // var b=false;
             
-            if (!(name == null || name == "")) {
-              a=true; 
-            } 
-            if (pass.length>6){
-                b=true;
-            }
+            // if (!(name == null || name == "")) {
+            //   a=true; 
+            // } 
+            // if (pass.length>6){
+            //     b=true;
+            // }
 
-            if(a==true && b==true){
-                return true;
-            }
-            else if(a==false && b==false){
-                var strvalidation = "Name can't be blank";
-                document.getElementById("demo01").innerHTML = strvalidation;   
-                return false;
-            }
-            else{
-                var result = "Password must be at least 6 characters long."
-                document.getElementById("demo02").innerHTML = result;
-                return false;
-            }
-
-
-            // if (name == null || name == "") {
+            // if(a==true && b==true){
+            //     return true;
+            // }
+            // else if(a==false && b==false){
             //     var strvalidation = "Name can't be blank";
             //     document.getElementById("demo01").innerHTML = strvalidation;   
             //     return false;
             // }
-            // check =true;
-            
-
-            // if(check ==true && pass.length>6){
-            //     return true;
-            // }
-
             // else{
             //     var result = "Password must be at least 6 characters long."
             //     document.getElementById("demo02").innerHTML = result;
             //     return false;
             // }
+
+
+            if (name == null || name == "") {
+                var strvalidation = "Name can't be blank";
+                document.getElementById("demo01").innerHTML = strvalidation;   
+                return false;
+            }
+            check =true;
+            
+
+            if(check ==true && pass.length>6){
+                return true;
+            }
+
+            else{
+                var result = "Password must be at least 6 characters long."
+                document.getElementById("demo02").innerHTML = result;
+                return false;
+            }
 
             
         }
