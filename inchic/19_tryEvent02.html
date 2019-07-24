@@ -15,11 +15,6 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-        <script>
-            function auto(){
-
-            }
-        </script>
 
 
 
@@ -28,28 +23,56 @@
 <body>
 
     <script>
-        function isName(){
-            var firstName = document.myform.firstName.value;
-            if(firstName == null || firstName == ""){
-                var firstInvalid = "Please provide a valid name";
-                document.getElementById("fName").innerHTML=firstInvalid;
-                document.myform.firstName.class = "form-control is-valid";
-                document.write(document.myform.firstName.class)
-                
+        function valid() {
+
+            var finput = document.myform.fname.value;
+            var linput = document.getElementById("idlname").value; //이렇게 접근하는게 훨씬 자유롭네
+            
+            if (finput == null || finput == "") {
+                document.getElementById("idfname").classList.add("is-invalid");
+                if (linput == null || linput == "") {
+                document.getElementById("idlname").classList.add("is-invalid");
+                }
                 return false;
             }
+
+            return true;
+            
         }
+
     </script>
 
-    <form class="myform" onsubmit="return isName()">
-        First name 
-        <input type="text" class="form-control valid" name="firstName">
-        <div class="valid-feedback">Looks good!</div>
 
-        <button type="submit" >submit</button>
 
+    <form name="myform" action="/login" onsubmit="return valid()">
+        <div>
+            <p>First name</p>
+            <input type="text" class="form-control" name="fname" id="idfname">
+            <!-- is-valid is-invalid로 조정 -->
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">Please choose a First name</div>
+        </div>
+        <div>
+            <p>Last name</p>
+            <input type="text" class="form-control" name="lname" id="idlname">
+            <!-- is-valid is-invalid로 조정 -->
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">Please choose a First name</div>
+        </div>
+
+        
+
+
+        <input type="submit" value="submit">
     </form>
-    
+
+
+
+
+
+
+
+
 
 </body>
 

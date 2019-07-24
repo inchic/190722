@@ -23,34 +23,56 @@
 <body>
 
     <script>
-        function fName() {
-            
-            var input = document.myform.fname.value;
+        function valid() {
 
-            if (input == null || input == "") {
+            var finput = document.myform.fname.value;
+            var linput = document.getElementById("idlname").value; //이렇게 접근하는게 훨씬 자유롭네
+            
+            if (finput == null || finput == "") {
                 document.getElementById("idfname").classList.add("is-invalid");
                 return false;
             }
-
+            if (linput == null || linput == "") {
+                document.getElementById("idlname").classList.add("is-invalid");
+                return false;
+            }
             return true;
+            
         }
+
     </script>
 
 
 
-    <form name="myform" action="/login" onsubmit="return fName()">
+    <form name="myform" action="/login" onsubmit="return valid()">
+        <div>
+            <p>First name</p>
+            <input type="text" class="form-control" name="fname" id="idfname">
+            <!-- is-valid is-invalid로 조정 -->
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">Please choose a First name</div>
+        </div>
+        <div>
+            <p>Last name</p>
+            <input type="text" class="form-control" name="lname" id="idlname">
+            <!-- is-valid is-invalid로 조정 -->
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">Please choose a First name</div>
+        </div>
 
-        <p>First name</p>
-        <input type="text" class="form-control" name="fname" id="idfname">
-        <!-- is-valid is-invalid로 조정 -->
-        <div class="valid-feedback">Looks Good!</div>
-        <div class="invalid-feedback">Please choose a First name</div>
+        
 
 
         <input type="submit" value="submit">
     </form>
 
-    
+
+
+
+
+
+
+
 
 </body>
 

@@ -15,6 +15,11 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
+        <script>
+            function auto(){
+
+            }
+        </script>
 
 
 
@@ -23,33 +28,27 @@
 <body>
 
     <script>
-        function fName() {
-            
-            var input = document.myform.fname.value;
-
-            if (input == null || input == "") {
-                document.getElementById("idfname").classList.add("is-invalid");
+        function isName(){
+            var firstName = document.myform.firstName.value;
+            if(firstName == null || firstName == ""){
+                var firstInvalid = "Please provide a valid name";
+                document.getElementById("fName").innerHTML=firstInvalid;
+                document.myform.firstName.class = "form-control is-valid";
+                document.write(document.myform.firstName.class)
+                
                 return false;
             }
-
-            return true;
         }
     </script>
 
+    <form class="myform" onsubmit="return isName()">
+        First name 
+        <input type="text" class="form-control valid" name="firstName">
+        <div class="valid-feedback">Looks good!</div>
 
+        <button type="submit" >submit</button>
 
-    <form name="myform" action="/login" onsubmit="return fName()">
-
-        <p>First name</p>
-        <input type="text" class="form-control" name="fname" id="idfname">
-        <!-- is-valid is-invalid로 조정 -->
-        <div class="valid-feedback">Looks Good!</div>
-        <div class="invalid-feedback">Please choose a First name</div>
-
-
-        <input type="submit" value="submit">
     </form>
-
     
 
 </body>
