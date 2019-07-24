@@ -24,7 +24,7 @@
         <div class="col-sm-4">
             <div class="m-3">
                 <!-- 크기 비교 Function 만들기 -->
-                <form onsubmit="return input.f_compare()">
+                <form onsubmit="return input.f_compare(this)">
                     <div>
                         크기 비교 Function
                     </div>
@@ -39,10 +39,12 @@
                 <script>
 
                     var input = {
-                        f_compare: function () {
+                        f_compare: function (asdf) {
 
-                            var a = document.getElementById("num1").value;
-                            var b = document.getElementById("num2").value;
+                            // var a = document.getElementById("num1").value;
+                            // var b = document.getElementById("num2").value;
+                            var a=asdf.num1.value;
+                            var b=asdf.num2.value;
 
                             if (a > b) {
                                 document.getElementById("num2").classList.remove("is-valid"); //삭제를 시켜줘야 초기화된다
@@ -128,7 +130,7 @@
 
                 <script>
                     var f_getTextAndreplace = function () {
-                        
+                        this;
                         var str = document.getElementById("str2").value;
                         var CSS = document.getElementById("css2").value;
                         var change = document.getElementById("change2").value;
