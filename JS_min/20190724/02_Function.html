@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script>
+
+            // function f_compare(a) {
+            //     var input1 = a.input1.value;
+            //     alert(this.value)
+            //     var input2 = this.input2.value;
+
+
+            //     if (input1 > input2) {
+            //         document.getElementById("demo1").innerHTML = input1;
+
+            //         return false;
+            //     }
+            //     else {
+            //         document.getElementById("demo1").innerHTML = input2;
+
+            //         return false;
+            //     }
+            //     return false;
+
+            // }
+
+
+        function f_compare() {
+            var input1 = document.compare.input1.value;
+            alert(this.value)
+            var input2 = document.compare.input2.value;
+
+
+            if (input1 > input2) {
+                document.getElementById("demo1").innerHTML = input1;
+               
+                return false;
+            }
+            else {
+                document.getElementById("demo1").innerHTML = input2;
+                
+                return false;
+            }
+            return false;
+
+        }
+
+        function f_getTextAndoutput() {
+            var str = "HTML element has been changed"; 
+            var text = document.exclude.text.value;
+            var array = str.split(" ");
+            var strarray = [];
+
+            for (A in array) {
+                if (array[A] != text) {
+                    strarray += array[A] + " ";
+                }
+                else break;
+            }
+
+            document.getElementById("demo2").innerHTML = strarray;
+            return false;
+        }
+
+        function f_getTectAndreplace(){
+            var str = "HTML element CSS"
+            var array = str.split(" ");
+            var text1 = document.change.text1.value;
+            var text2 = document.change.text2.value;
+            var change = [];
+            for(A in array){
+                if(array[A] == text1){
+                    
+                }
+            }
+        }
+
+    </script>
+
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <form name="compare" onsubmit="return f_compare(this)">
+        First_Input: <input type="text" name="input1">
+        
+        Second_Input: <input type="text" name="input2">
+        <input type="submit" class="btn btn-primary px-3">
+    </form>
+
+
+    
+    <form name="exclude" onsubmit="return f_getTextAndoutput()">
+        제외 문장: <input type="text" name="text">
+        <input type="submit" class="btn btn-primary px-3">
+    </form>
+
+
+    <form name="change" onsubmit="return  f_getTectAndreplace()">
+        First_change: <input type="text" name="text1">
+        Second_change: <input type="text" name="text2">
+        <input type="submit" class="btn btn-primary px-3">
+    </form>
+
+
+</body>
+
+</html>
