@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="m-3">
+                <!-- 크기 비교 Function 만들기 -->
+                <form onsubmit="return input.f_compare()">
+                    <div>
+                        크기 비교 Function
+                    </div>
+                    <input type="number" name="num1" id="num1" placeholder="num1" class="form-control">
+                    <input type="number" name="num2" id="num2" placeholder="num2" class="form-control">
+                    <input type="submit" value="크기 비교">
+                </form>
+
+
+
+
+                <script>
+
+                    var input = {
+                        f_compare: function () {
+
+                            var a = document.getElementById("num1").value;
+                            var b = document.getElementById("num2").value;
+
+                            if (a > b) {
+
+                                document.getElementById("num1").classList.add("is-valid");
+                                document.getElementById("num2").classList.add("is-invalid");
+
+                                return false;
+                            }
+                            else if (a < b) {
+                                document.getElementById("num2").classList.add("is-valid");
+                                document.getElementById("num1").classList.add("is-invalid");
+
+                                return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                    }
+
+                </script>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="m-3">
+                <!-- 동일 단어 제외 문장 출력 Function 만들기 -->
+                <form onsubmit="return f_subStringWithText()">
+                    <div>
+                        동일 단어 제외 문장 출력 Function
+                        <input type="text" name="str1" id="str1" value="HTML element has been changed"
+                            class="form-control">
+                        <input type="text" name="word1" id="word1" placeholder="위 문장에서 제외할 단어를 입력하시오"
+                            class="form-control">
+                        <input type="text" name="result1" id="result1" placeholder="결과" class="form-control">
+                        <input type="submit" value="단어 제외">
+                    </div>
+                </form>
+
+
+
+
+                <script>
+                    var f_subStringWithText = function () {
+                        var str = document.getElementById("str1").value;
+                        var expt = document.getElementById("word1").value;
+
+                        var num = expt.length;
+                        var length = str.length;
+                        var index = str.indexOf(expt);
+
+                        var result = str.substring(0, index) + str.substring(index + num, length);
+                        document.getElementById("demo03").innerHTML = "단어 제외 결과: " + result; //document에 결과출력하는방법
+                        document.getElementById("result1").value = result; //input창에 결과출력하는방법
+                        return false;
+
+                    }
+
+
+
+                </script>
+                <p id="demo03">
+                    <<<단어 제외 결과>>>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="m-3">
+                <!-- 문자 위치 바꾸는 Function 만들기 -->
+                <form onsubmit="return f_getTextAndreplace()">
+                    <div>
+                        문자 위치 바꾸는 Function
+                        <input type="text" name="str2" id="str2" value="HTML element CSS" class="form-control">
+                        <input type="text" name="css2" id="css2" value="CSS" class="form-control">
+                        <input type="text" name="change2" id="change2" value="HTML" class="form-control">
+                        <input type="text" name="result2" id="result2" placeholder="결과" class="form-control">
+                        <input type="submit" value="단어 위치 바꾸기">
+                    </div>
+                </form>
+
+                <script>
+                    var f_getTextAndreplace = function () {
+                        var str = document.getElementById("str2").value;
+                        var CSS = document.getElementById("css2").value;
+                        var change = document.getElementById("change2").value;
+
+                        var cssIndex = str.indexOf(CSS);
+                        var changeIndex = str.indexOf(change);
+
+                        var length = str.length;
+                        var lenChange = change.length;
+                        var lenCSS = CSS.length;
+
+                        var replace;
+
+                        if (cssIndex < changeIndex) {
+                            replace = str.substring(0, cssIndex) + change + str.substring(cssIndex + lenCSS, changeIndex) + CSS + str.substring(changeIndex + lenChange, length);
+                            document.getElementById("demo05").innerHTML = "결과: " + replace; //document에 결과출력하는방법
+                            document.getElementById("result2").value = replace; //input창에 결과출력하는방법
+                        }
+                        else {
+                            replace = str.substring(0, changeIndex) + CSS + str.substring(changeIndex + lenChange, cssIndex) + change + str.substring(cssIndex + lenCSS, length);
+                            document.getElementById("demo05").innerHTML = "결과: " + replace; //document에 결과출력하는방법
+                            document.getElementById("result2").value = replace; //input창에 결과출력하는방법
+                        }
+
+                        return false;
+
+                    }
+
+
+
+                </script>
+                <p id="demo05">
+                    <<<결과>>>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

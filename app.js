@@ -74,6 +74,14 @@ router.get('/inchic/18', function (req, res) {
     res.sendFile(path.join(__dirname + '/inchic/18_onsubmit.html'));
     //__dirname : It will resolve to your project folder.
 });
+router.get('/inchic/19_1', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/19_tryEvent01.html'));
+    //__dirname : It will resolve to your project folder.
+});
+router.get('/inchic/19_2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/inchic/19_tryEvent02.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 

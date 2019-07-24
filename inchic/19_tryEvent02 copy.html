@@ -30,11 +30,14 @@
             
             if (finput == null || finput == "") {
                 document.getElementById("idfname").classList.add("is-invalid");
-                if (linput == null || linput == "") {
-                document.getElementById("idlname").classList.add("is-invalid");
-                }
+                
                 return false;
             }
+            else if (linput == null || linput == "") {
+                document.getElementById("idlname").classList.add("is-invalid");
+
+                return false;
+                }
 
             return true;
             
