@@ -21,9 +21,7 @@
 </head>
 
 <body>
-    <!-- 01 -->
-    <!-- 01 -->
-    <!-- 01 -->
+
     <script>
         function auto2() {
 
@@ -61,8 +59,8 @@
 
 
         <!-- form을 써야만 작동하고, div class=form을 쓰면 작동 안함 -->
-        <form name=form>
-
+        <form name=form> 
+            
             <div class="row">
 
                 <div class="col-sm-6">
@@ -113,53 +111,54 @@
 
 
 
+<script>
+    function valid() {
 
-    <!-- 02 -->
-    <!-- 02 -->
-    <!-- 02 -->
-    <script>
-        function valid() {
-
-            var finput = document.myform.fname.value;
-            var linput = document.getElementById("idlname").value; //이렇게 접근하는게 훨씬 자유롭네
-
-            if (finput == null || finput == "") {
-                document.getElementById("idfname").classList.add("is-invalid");
-                if (linput == null || linput == "") {
-                    document.getElementById("idlname").classList.add("is-invalid");
-                }
-                return false;
+        var finput = document.myform.fname.value;
+        var linput = document.getElementById("idlname").value; //이렇게 접근하는게 훨씬 자유롭네
+        
+        if (finput == null || finput == "") {
+            document.getElementById("idfname").classList.add("is-invalid");
+            if (linput == null || linput == "") {
+            document.getElementById("idlname").classList.add("is-invalid");
             }
-
-            return true;
-
+            return false;
         }
 
-    </script>
+        return true;
+        
+    }
+
+</script>
 
 
 
-    <form name="myform" action="/login" onsubmit="return valid()">
-        <div>
-            <p>First name</p>
-            <input type="text" class="form-control" name="fname" id="idfname">
-            <!-- is-valid is-invalid로 조정 -->
-            <div class="valid-feedback">Looks Good!</div>
-            <div class="invalid-feedback">Please choose a First name</div>
-        </div>
-        <div>
-            <p>Last name</p>
-            <input type="text" class="form-control" name="lname" id="idlname">
-            <!-- is-valid is-invalid로 조정 -->
-            <div class="valid-feedback">Looks Good!</div>
-            <div class="invalid-feedback">Please choose a First name</div>
-        </div>
+<form name="myform" action="/login" onsubmit="return valid()">
+    <div>
+        <p>First name</p>
+        <input type="text" class="form-control" name="fname" id="idfname">
+        <!-- is-valid is-invalid로 조정 -->
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">Please choose a First name</div>
+    </div>
+    <div>
+        <p>Last name</p>
+        <input type="text" class="form-control" name="lname" id="idlname">
+        <!-- is-valid is-invalid로 조정 -->
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">Please choose a Last name</div>
+    </div>
+
+    
+
+
+    <input type="submit" value="submit">
+</form>
 
 
 
 
-        <input type="submit" value="submit">
-    </form>
+
 
 
 
