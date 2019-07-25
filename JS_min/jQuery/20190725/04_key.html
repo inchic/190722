@@ -15,29 +15,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    
+    <script>
+        $(document).on('keypress',function(event){
+            if(event.which == 13){
+                $(alert("You pressed enter!"));
+            }
+        });
+
+        $(document).keypress(function(e){
+            if(e.which == 13){
+                alert("You pressed enter!");
+            }
+        });
+        
+    
+
+        $(document).ready(function(){
+           
+            $("#textbox").keyup(function(event){
+                $("#msg-keyup").html('keyup() is triggered!, keyCode = '+event.keyCode)
+            });
+
+            $("#textbox").keydown(function(event){
+                $("#msg-keydown").html('keydown() is triggered!, keyCode = '+event.keyCode)
+            });
+
+        });
+
+
+    </script>
 </head>
 
 <body>
-    <script>
-       // document.cookie = "expires=Thu, 18 Dec 2013 12:00:00 UTC; ... ;";
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getDate + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-            alert(document.cookie);
-        }
-        function getCookie() {
-            alert(document.cookie);
-            var decodedCookie = decodeURIComponent(document.cookie);
-            alert(decodedCookie);
-            var ca = decodedCookie.split(';');
-            
-        }
-    </script>
-
-     <button onclick="setCookie('useremail','otter@gmail.com', 20)">setCookie</button>
-     <button onclick="getCookie()">getCookie</button>
+    입력 <input type="text" id="textbox">
+    <!-- <p id="textbox">첫번째</p> -->
+    <p id="msg-keyup">두번째</p>
+    <p id="msg-keydown">세번째</p>
 
 
 </body>
