@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script>
+
+        // $(document).on('keypress', function (event){
+        //     if (event.which == 13) {
+        //         alert('너는 눌렀다 엔터');
+        //     }
+        // });
+        // $().ready(function () {
+        //     $('#textbox').keyup(function (event) {
+        //         $('#msg-keyup').html('keyup() is triggered!, keyCode = ' + event.keyCode)
+        //     });
+
+        //     $('#textbox').keydown(function(event){
+        //         $('#msg-keydown').html('keydown() is triggered!, keyCode = '+event.keyCode)
+        //     });
+        // });
+
+
+        $(document).on('keypress keydown', function (event) {
+            //event가 아니라 뭐라도 상관없다. 다만 key가 press될때 키 고유 넘버가 들어오고, ~~.which==13은 엔터의 고유값이다
+            //또한 event.which와 event.keyCode는 같은말인데, 크롬에서는 잘 동작, 하지만 which가 좀더 다른브라우저에도 범용성있는 표현
+
+            if (event.which == 13) {
+                alert('You pressed enter!');
+            }
+        });
+        $().ready(function () {
+            $('#textbox').keyup(function (event) {
+                //#~~은 id="~~"이다
+                $('#msg-keyup').html('keyup() is triggered!, keyCode = ' + event.keyCode)
+            });
+            //keydown은 키보드를 누를때, keypu은 키보드를 뗄떼
+            $('#textbox').keydown(function (event) {
+                $('#msg-keydown').html('keydown() is triggered!, keyCode = ' + event.keyCode)
+            });
+        });
+
+
+    </script>
+
+    <input type="text" id="textbox"> 
+    <p id="msg-keydown"></p>
+    <p id="msg-keyup"></p>
+
+
+</body>
+
+</html>

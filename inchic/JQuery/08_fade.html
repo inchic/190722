@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("#div1").fadeOut();  //.fadeOut(스피드, 콜백)
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+    </script>
+
+    <button>Click to fade out boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div><br><br>
+
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("#div4").fadeToggle();  //.fadeOut(스피드, 콜백)
+                $("#div5").fadeToggle("slow");
+                $("#div6").fadeToggle(3000);
+            });
+        });
+    </script>
+    <div>fadeToggle</div>
+    <div id="div4" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div5" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div6" style="width:80px;height:80px;background-color:blue;"></div>
+
+    <script>
+            $(function () {
+                $("button").click(function () {
+                    $("#div7").fadeIn();  //.fadeOut(스피드, 콜백)
+                    $("#div8").fadeIn("slow");
+                    $("#div9").fadeIn(3000);
+                });
+            });
+        </script>
+        <div>fadeIn</div>
+        <div id="div7" style="width:80px;height:80px;background-color:red;display:none;"></div><br>
+        <div id="div8" style="width:80px;height:80px;background-color:green;display:none;"></div><br>
+        <div id="div9" style="width:80px;height:80px;background-color:blue;display:none;"></div>
+</body>
+
+</html>
