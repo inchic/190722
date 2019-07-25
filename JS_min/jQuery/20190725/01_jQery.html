@@ -14,31 +14,47 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    
+    <!-- <script>https://code.jquery.com/jquery-3.4.1.min.js</script> -->
 </head>
 
 <body>
     <script>
-       // document.cookie = "expires=Thu, 18 Dec 2013 12:00:00 UTC; ... ;";
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getDate + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-            alert(document.cookie);
-        }
-        function getCookie() {
-            alert(document.cookie);
-            var decodedCookie = decodeURIComponent(document.cookie);
-            alert(decodedCookie);
-            var ca = decodedCookie.split(';');
+        // function popUp(){
+        //     alert("You entered h1!");
+        // }
+
+        // $(function(){
+        //     $("h1").hover(popUp());
+        // });
+
+            // $(document).ready(function(){
+            //     $("button").click(function(){
+            //         $("p").hide();
+            //     });
+            // });
+
+        
+            // $(document).ready(f_fun);
             
-        }
+
+            $(function(){
+                $(document).ready(f_fun);
+            });
+
+           var f_fun = function(){
+               $("button").click(f_fun2);
+           }
+
+           var f_fun2 = function(){
+               $("p").hide();
+           }
+
+    
     </script>
-
-     <button onclick="setCookie('useremail','otter@gmail.com', 20)">setCookie</button>
-     <button onclick="getCookie()">getCookie</button>
-
+    
+    <p>This is a paragraph.</p>
+    <button>Click me</button>
 
 </body>
 
