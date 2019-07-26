@@ -18,6 +18,32 @@
 
 <body>
 
+
+
+    <script>
+        function signIn() {
+            var name = this.id.value;
+            var password = this.pw.value;
+            var exdays = 30;
+            
+
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = name + "=" + password + ";" + expires + ";path=/";
+            
+            alert(document.cookie);
+            return false;
+        }
+        function getCookie() {
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            alert(ca[0]);
+        }
+    </script>
+
+
     <form action="/login" onsubmit="return signIn(this)">
         <h5>Username or email address</h5>
         <input type="text" class="form-control" id="id" name="id">
@@ -28,26 +54,7 @@
         <button onclick="getCookie()">getCookie</button>
     </form>
 
-    <script>
-        document.cookie = "expires "
-    </script>
 
-    <script>
-        function signIn() {
-            var name = this.id.value;
-            var password = this.pw.value;
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = name + "=" + password + ";" + expires + ";path=/";
-            alert(document.cookie);
-        }
-        function getCookie() {
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            alert(ca[0]);
-        }
-    </script>
 
 
 
