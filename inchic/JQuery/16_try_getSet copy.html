@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+    <br>
+    <button id="btn1">Discovery</button>
+    <button id="btn2">Atlantis</button>
+    <button id="btn3">Endeavour</button>
+    <input type="text" id="box1">
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("#box1").val("Discovery")
+            })
+            $("#btn2").click(function () {
+                $("#box1").val("Atlantis")
+            })
+            $("#btn3").click(function () {
+                $("#box1").val("Endeavour")
+            })
+        })
+    </script>
+
+    <br><br>
+    <button id="btn21">삭제</button>
+    <button id="btn22">생성</button>
+    <button id="btn23">붙여넣기</button>
+    <br>
+    <span id="stn">삭제생성붙여넣기삭제생성붙여넣기삭제생성붙여넣기</span>
+
+
+    <script>
+        $(function () {
+            $("#btn21").click(function () {
+                $("#stn").text("")
+            })
+            $("#btn22").click(function () {
+                $("#stn").append("<br> 삭제생성붙여넣기삭제생성붙여넣기삭제생성붙여넣기")
+            })
+            $("#btn23").click(function () {
+                $("#stn").append("삭제생성붙여넣기삭제생성붙여넣기삭제생성붙여넣기")
+            })
+           
+        })
+    </script>
+
+
+
+
+    <br><br>
+    <button id="btn51">테이블html확인</button>
+    <button id="btn52">생성</button>
+    <button id="btn53">붙여넣기</button>
+    <br>
+    <table id="tb">
+        <input type="text" id="result51">
+        <tr>
+            <td>11111111111111111</td>
+            <td>33333333333333333</td>
+        </tr>
+        <tr>
+            <td>22222222222222222</td>
+            <td></td>
+        </tr>
+
+
+    </table>
+
+    <script>
+        var str=$("#tb").html();
+        var idx=str.indexOf("</tbody>")-1;
+
+        $(function () {
+            $("#btn51").click(function () {
+                $("#result51").val(
+                    $("#tb").html()
+                )
+            })           
+
+            &("#btn52").click(function(){
+                $("#result51").val(
+                   
+                )
+            })
+           
+        })
+    </script>
+
+
+
+
+
+
+
+
+    <br><br>
+    <input type="checkbox" id="chk1">
+    <span>Arduino</span>
+    <input type="checkbox" id="chk2">
+    <span>Android</span>
+    <input type="checkbox" id="chk3">
+    <span>AI</span>
+    <input type="checkbox" id="chk4">
+    <span>Big Data</span>
+    <button id="btn4">All Check Toggle</button>
+
+    <script>
+        $(function () {
+            $("#btn4").click(function () {
+                $("#chk1,#chk2,#chk3,#chk4").click()
+            })
+        })
+    </script>
+    <br><br>
+    <div class="row ml-1">
+        <div class="border p-1">
+            <input type="checkbox" id="chk5">
+            <span>All Check</span>
+        </div>
+        <div class="border p-1">
+            <input type="checkbox" id="chk6">
+            <span>Arduino</span>
+            <input type="checkbox" id="chk7">
+            <span>Android</span>
+            <input type="checkbox" id="chk8">
+            <span>AI</span>
+            <input type="checkbox" id="chk9">
+            <span>Big Data</span>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#chk5").click(function () {
+                $("#chk6,#chk7,#chk8,#chk9").click()
+            })
+        })
+    </script>
+
+
+    <br><br>
+    <table>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" value="sanghun Oh" id="text21">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Comments:
+            </td>
+            <td>
+                <textarea type="text" class="form-control form-control" id="text22">
+hello, 
+World !
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                City:
+            </td>
+            <td>
+                <select id="sel1">
+                    <option>Paris</option>
+                    <option>London</option>
+                    <option>Seoul</option>
+                    <option>Tokyo</option>
+                    <option>Deli</option>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <input type="text" id="result" placeholder="result">
+    <br><br>
+    <button id="button10">Get Name</button>
+    <button id="button11">Get Comment</button>
+    <button id="button12">Get City</button>
+
+
+
+    <script>
+        $(function () {
+            $("#button10").click(function () {
+                $("#result").val($("#text21").val())
+            })
+            $("#button11").click(function () {
+                $("#result").val($("#text22").text())
+            })
+            $("#button12").click(function () {
+                $("#result").val($("#sel1").val())
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

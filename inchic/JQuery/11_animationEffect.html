@@ -20,32 +20,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-        function submit(tname) {
-            //이름을 .split 하고, 이름[0] [1] 로 앞뒤호출한다
-            //누른 버튼이 first인지 last인지 판단해서 필요없는 input창을 지운다
-
-
-        }
-
-        function find(){
-            //first버튼을 눌렀는지 last버튼을 눌렀는지 판단한다
-            if(){
-
-            }
-        }
-
+        $(document).ready(function () {
+            $("#button").click(function () {
+                var div = $("div");
+                div.animate({ left: '100px' }, "slow");
+                div.animate({ fontSize: '3em' }, "slow");
+            })
+            $("#stop").click(function(){
+                $("div").stop();
+                $("div").stop();
+            })
+        })
     </script>
-
-    <form onsubmit="return submit(this)">
-
-        <input type="text" class="form-control" value="John Doe" id="total" name="tname">
-        <input type="text" class="form-control" placeholder="First" id="first" name="fname">
-        <input type="text" class="form-control" placeholder="Last" id="last" name="lname">
-
-        <button type="submit">First</button>
-        <button type="submit">Last</button>
-    </form>
-
+    <style>
+        div {
+            background: #98bf21;
+            height: 100px;
+            width: 200px;
+            position: absolute; 
+            /* 포지션 절대는 기준을 항상 잡아준다 */
+        }
+    </style>
+    <button id="button">Start Animation</button>
+    <button id="stop">Stop</button>
+    <div>HELLO</div>
+    
+    
 
 
 </body>
