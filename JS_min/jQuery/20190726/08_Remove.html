@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#button01").click(function(){
+                $(".test").empty();
+            });
+
+            $("#button02").click(function(){
+                $("p").remove(".test, .demo");
+                $("P").append("ASDSDA");
+            });
+
+            $("#button03").click(function(){
+              
+                $("P").append("ASDSDA");
+            });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <p class="test" style="border:1px solid black;">This is a paragraph in the
+        div.</p>
+    <p class="demo">This is another paragraph in the div.</p>
+    <button id="button01">Empty the div element</button>
+    <button id="button02">Remove all p elements</button>
+    <button id="button03">Rents</button>
+</body>
+
+</html>

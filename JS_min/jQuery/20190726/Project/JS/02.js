@@ -1,7 +1,8 @@
 $(function(){
             
     $("#content_Name").click(function(){
-        var name = $("#name").val();
+        var name11 = $("#name").attr("name");
+        alert(name11);
         $("#demo").text(name);
     });
 

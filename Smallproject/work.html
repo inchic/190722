@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        $(function(){
+            var check = false;
+            var out = false;
+            var work;
+            var gettime;
+
+            var hours;
+            var min;
+            var se;
+        
+            // var hours2;
+            // var min2;
+            // var se2;
+
+            
+            $("#start_btn").click(function(){
+                if(out == true){
+                    alert("이미 퇴근을 하셨습니다!");
+                }
+                else{
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth()+1;
+                    var yyyy = today.getFullYear();                
+                    var date = yyyy+"/"+mm+"/"+dd;
+                    $("#date").html(date);
+                    gettime = today.getTime();
+                    hours = today.getHours();
+                    min = today.getMinutes();
+                    se = today.getSeconds();
+                    
+                    time = hours+"시"+min+"분"+se+"초";
+                    $("#start").html(time);
+                    
+                    check=true;
+                }
+                
+            });
+            
+            $("#end_btn").click(function(){
+               if(check == false){
+                   alert("출근부터하세요!");
+               }
+               else{
+                var today = new Date();
+                var hours2 = today.getHours();
+                var min2 = today.getMinutes();
+                var se2 = today.getSeconds();
+                var time = hours2+"시"+min2+"분"+se2+"초";
+                $("#end").html(time);
+               
+                $("#time").html(hours2 -hours+"시간");
+               
+                
+                out=true;
+               }
+            });
+
+        });
+
+    </script>
+</head>
+
+
+<body>
+    <div>
+        <button id="start_btn" class="btn btn-outline-dark">출근</button>
+        <button id="end_btn" class="btn btn-outline-dark">퇴근</button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">날짜</th>
+                <th scope="col">출근시간</th>
+                <th scope="col">퇴근시간</th>
+                <th scope="col">총시간</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row"><input id="check "type="checkbox"></input></th>
+                <td><p id="date"></p></td>
+                <td><p id="start"></p></td>
+                <td><p id="end"></p></td>
+                <td><p id="time"></p></td>
+            </tr>
+
+            <tr>
+                <th scope="row"><input type="checkbox"></input></th>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+            </tr>
+                
+            <tr>
+                <th scope="row"><input type="checkbox"></input></th>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+            </tr>
+                
+            <tr>
+                <th scope="row"><input type="checkbox"></input></th>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+            </tr>
+                
+            <tr>
+                <th scope="row"><input type="checkbox"></input></th>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

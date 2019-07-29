@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    </style>
+
+    <script>
+        $(function(){
+            $("#login").click(function(){
+                var id=$("#id").val();
+               
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div style="background-image: url(./image/back.jpg); width: 100%; height: 100%;" class="w-100 h-100 p-3">
+        <!-- <div class="justify-content-center text-center">
+            <h1>23yeui9hy39hwqe</h1>
+            <p>asdsd</p>
+        </div> -->
+        <div class="container">
+
+            <div class="bg-light">
+                <nav class="navbar navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="./image/logo.png" width="30" height="30" class="d-inline-block align-top">
+                        COMPANY NAME
+                    </a>
+                    <a>인사관리 시스템</a>
+                </nav>
+
+
+                <div class="container row align-items-center">
+                    
+                    <form class="container row align-items-center" >
+                        <div class="input-group mb-3">
+                            <input id="id" type="text" class="form-control" placeholder="Input account">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input id="password" type="text" class="form-control" placeholder="Input Password">
+                        </div>
+
+                        <button id="login" type="submit" class="btn btn-light boder border border-secondary">LOGIN</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

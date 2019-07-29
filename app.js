@@ -99,7 +99,10 @@ router.get('/inchic/26', function (req, res) {
 });
 
 
-
+router.get('/main2', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Smallproject/main2.html'));
+    //__dirname : It will resolve to your project folder.
+});
 
 
 
