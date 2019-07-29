@@ -21,16 +21,7 @@
         $(function(){
             var check = false;
             var out = false;
-            var work;
-            var gettime;
-
-            var hours;
-            var min;
-            var se;
-        
-            // var hours2;
-            // var min2;
-            // var se2;
+           
 
             
             $("#start_btn").click(function(){
@@ -44,12 +35,12 @@
                     var yyyy = today.getFullYear();                
                     var date = yyyy+"/"+mm+"/"+dd;
                     $("#date").html(date);
-                    gettime = today.getTime();
-                    hours = today.getHours();
-                    min = today.getMinutes();
-                    se = today.getSeconds();
+                    var gettime = today.getTime();
+                    var hours = today.getHours();
+                    var min = today.getMinutes();
+                    var se = today.getSeconds();
                     
-                    time = hours+"시"+min+"분"+se+"초";
+                    var time = hours+"시"+min+"분"+se+"초";
                     $("#start").html(time);
                     
                     check=true;
